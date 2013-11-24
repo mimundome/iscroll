@@ -239,13 +239,6 @@ iScroll.prototype = {
 		if (!that[dir + 'Scrollbar']) {
 
 			if (that[dir + 'ScrollbarWrapper']) {
-
-				//Remove scrollbar event listeners
-				if (that.options.draggableScrollbars) {
-					if (that.vScrollbar) that._unbind(START_EV, that.vScrollbarIndicator);
-					if (that.hScrollbar) that._unbind(START_EV, that.hScrollbarIndicator);
-				}
-
 				if (hasTransform) that[dir + 'ScrollbarIndicator'].style[transform] = '';
 				that[dir + 'ScrollbarWrapper'].parentNode.removeChild(that[dir + 'ScrollbarWrapper']);
 				that[dir + 'ScrollbarWrapper'] = null;
